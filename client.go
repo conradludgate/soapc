@@ -292,6 +292,7 @@ func (s *Client) Call(soapAction string, request, response, responseHeader inter
 		}
 	} else {
 		envelope = RequestEnvelope{
+			XmlnsSoap: "http://www.w3.org/2003/05/soap-envelope",
 			Body: RequestBody{
 				Content: request,
 			},
